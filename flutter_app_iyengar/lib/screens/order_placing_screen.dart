@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_iyengar/models/product.dart'; // Import your product data
-import 'package:flutter_app_iyengar/screens/order_summary_screen.dart'; // Import your order summary screen
+import 'package:flutter_app_iyengar/models/product.dart'; 
+import 'package:flutter_app_iyengar/screens/order_summary_screen.dart'; 
 
 class OrderPlacingScreen extends StatefulWidget {
   @override
@@ -8,18 +8,13 @@ class OrderPlacingScreen extends StatefulWidget {
 }
 
 class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
-  // Define variables to hold user selections
   Map<Product, Map<Variant, int>> selectedProducts = {};
 
-  // Method to handle product selection
   void _selectProduct(Product product, int quantity, Variant variant) {
     setState(() {
-      // Check if the product already exists in the map
       if (selectedProducts.containsKey(product)) {
-        // If yes, update the quantity for the specific variant
         selectedProducts[product]![variant] = quantity;
       } else {
-        // If no, add the product to the map with the quantity
         selectedProducts[product] = {variant: quantity};
       }
     });
@@ -31,9 +26,9 @@ class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
       appBar: AppBar(
         title: Text(
           'Place Your Order',
-          style: TextStyle(fontWeight: FontWeight.bold), // Make the app bar title bold
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.deepOrange, // Set app bar background color
+        backgroundColor: Colors.deepOrange, 
       ),
       body: ListView.builder(
         itemCount: products.length,
@@ -44,8 +39,8 @@ class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
               product.name,
               style: TextStyle(
                 fontSize: 25,
-                fontWeight: FontWeight.bold, // Make product name bold
-                color: Colors.deepPurple, // Set product name color
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple, 
               ),
             ),
             subtitle: Column(
@@ -57,9 +52,9 @@ class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
                       Text(variant.size),
                       SizedBox(width: 30),
                       Text(
-                        '${variant.price} INR', // Add INR after the price
+                        '${variant.price} INR', 
                         style: TextStyle(
-                          color: Colors.black87, // Set price color
+                          color: Colors.black87, 
                         ),
                       ),
                       Spacer(),
@@ -85,7 +80,6 @@ class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // Navigate to order summary screen
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -96,7 +90,7 @@ class _OrderPlacingScreenState extends State<OrderPlacingScreen> {
         },
         label: Text('View Order Summary'),
         icon: Icon(Icons.shopping_cart),
-        backgroundColor: Colors.deepPurple, // Set FAB background color
+        backgroundColor: Colors.deepPurple, 
       ),
     );
   }

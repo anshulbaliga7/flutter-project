@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_iyengar/screens/welcome.dart'; // Import your welcome screen
+import 'package:flutter_app_iyengar/screens/welcome.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomeScreen(), // Set WelcomeScreen as the home widget
+      home: WelcomeScreen(), 
     );
   }
 }

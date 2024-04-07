@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_iyengar/screens/order_placing_screen.dart'; // Import the order placing screen
+import 'package:flutter_app_iyengar/screens/order_placing_screen.dart'; 
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5), // Adjust the duration as needed
+      duration: Duration(seconds: 5), 
     )..repeat(reverse: true);
     _animation = Tween<Offset>(
       begin: Offset.zero,
@@ -32,9 +32,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
       appBar: AppBar(
         title: Text(
           'Welcome to Iyengar\'s Chocolatey World',
-          style: TextStyle(fontWeight: FontWeight.bold), // Make the app bar title bold
+          style: TextStyle(fontWeight: FontWeight.bold), 
         ),
-        backgroundColor: Colors.deepOrange, // Set app bar background color
+        backgroundColor: Colors.deepOrange, 
       ),
       body: Stack(
         children: [
@@ -47,7 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   child: Container(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Colors.deepOrange, Colors.blue], // Set gradient colors
+                        colors: [Colors.deepOrange, Colors.blue], 
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
@@ -62,7 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/ihp.png', // Path to your image asset
+                  'assets/ihp.png',
                   width: 200,
                   height: 200,
                   fit: BoxFit.contain,
@@ -70,7 +70,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigate to order placing screen
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -79,13 +78,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87, // Set button background color
+                    backgroundColor: Colors.black87, 
                   ),
                   child: Text(
                     'Start Your Chocolate Adventure',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold, // Make button text bold
-                      fontSize: 18, // Set button text size
+                      fontWeight: FontWeight.bold, 
+                      fontSize: 18, 
                     ),
                   ),
                 ),

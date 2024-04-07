@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/product.dart'; // Import the product data defined earlier
+import 'models/product.dart'; 
 
 class ProductSelectionScreen extends StatefulWidget {
   @override
@@ -7,10 +7,8 @@ class ProductSelectionScreen extends StatefulWidget {
 }
 
 class _ProductSelectionScreenState extends State<ProductSelectionScreen> {
-  // Map to store selected products and their quantities
   Map<Product, int> selectedProducts = {};
 
-  // Function to handle incrementing quantity for a product
   void incrementQuantity(Product product) {
     setState(() {
       if (selectedProducts.containsKey(product)) {
@@ -21,7 +19,6 @@ class _ProductSelectionScreenState extends State<ProductSelectionScreen> {
     });
   }
 
-  // Function to handle decrementing quantity for a product
   void decrementQuantity(Product product) {
     setState(() {
       if (selectedProducts.containsKey(product)) {

@@ -8,7 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'thankyou.dart'; // Import the ThankYouPage
+import 'thankyou.dart';
 
 class OrderSummaryScreen extends StatelessWidget {
   final Map<Product, Map<Variant, int>> selectedProducts;
@@ -133,12 +133,12 @@ class OrderSummaryScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ThankYouPage()), // Navigate to ThankYouPage
+                    MaterialPageRoute(builder: (context) => ThankYouPage()), 
                   );
                 },
                 style: ElevatedButton.styleFrom(
                   alignment: Alignment.center,
-                  backgroundColor: Colors.black87, // Customize button color
+                  backgroundColor: Colors.black87, 
                   textStyle: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
